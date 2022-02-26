@@ -1,0 +1,8 @@
+{
+    "name":"day3/task1",
+    "description": "composer",
+    "license": "MIT",
+    "autoload":{
+        "classmap": ["model"]
+    }
+}
