@@ -2,7 +2,12 @@
     "name":"day3/task1",
     "description": "composer",
     "license": "MIT",
+    "require" : {
+      
+        "illuminate/database": "*"
+    },
     "autoload":{
-        "classmap": ["model"]
+        "classmap": ["model"],
+        "files": ["configuration.php"]
     }
 }

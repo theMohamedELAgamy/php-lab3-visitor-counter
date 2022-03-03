@@ -3,6 +3,7 @@
 $message="";
 
 require_once("vendor/autoload.php");
+
 if(!isset($_SESSION["flag"])){
 session_start();
 $_SESSION["flag"]=false;
@@ -11,11 +12,7 @@ if(isset($_POST["submit"])){
  
         if(visitor::validate($_POST["username"], $_POST["password"])){
                     counter::startingsession();
-                   /* die(
-                            
-                            "<h3> welcome</h3></br>  <input type='button'   "
-                            
-                                     );*/
+                  
                                        header("Location:user.php",true,301);
                                        exit();
         }else $message="incorrect pass or username" ;
