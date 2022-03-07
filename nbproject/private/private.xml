@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/lab3/model/visitor.php</file>
-            <file>file:/C:/xampp/htdocs/lab3/config.php</file>
-            <file>file:/C:/xampp/htdocs/lab3/model/views/login.php</file>
-            <file>file:/C:/xampp/htdocs/lab3/model/counter.php</file>
+            <file>file:/C:/xampp/htdocs/lab3/configuration.php</file>
+            <file>file:/C:/xampp/htdocs/lab3/model/dbhandler.php</file>
             <file>file:/C:/xampp/htdocs/lab3/default.php</file>
             <file>file:/C:/xampp/htdocs/lab3/user.php</file>
         </group>

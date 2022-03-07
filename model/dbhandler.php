@@ -1,7 +1,11 @@
 <?php
 use Illuminate\Database\Capsule\Manager as Capsule;
 class dbhandler{
-
+    
+      static function returncapsule(){
+           return $table=Capsule::table("items");
+      }
+    
     static function connect(){
             
            $capsule = new Capsule();
@@ -25,6 +29,8 @@ class dbhandler{
                     echo "<td> Name </td>";
                     echo "<td> Price </td>";
                     echo "<td> Country </td>";
+                     echo "<td> photo </td>";
+                      echo "<td> view </td>";
 
                     echo "</tr>";
                 }
@@ -33,7 +39,13 @@ class dbhandler{
                     echo "<td>".$item->product_name ."</td>";
                     echo "<td>".$item->list_price ."</td>";
                     echo "<td>".$item->CouNtry ."</td>";
-                    echo '<td><a href="<?php echo $previous_link;  ?>"> more</a> </td>';
+                    
+                     $imag=explode(".",$item->Photo);
+                     $imag=$imag[0]."tz.".$imag[1];
+                     $imag="images/$imag";
+                    echo "<td><img src=$imag></td>";
+                    $more="more.php?id=$item->id";
+                    echo "<td><a href=$more> more</a> </td>";
                 echo "</tr>";
 
                 $record_index ++;
@@ -43,7 +55,7 @@ class dbhandler{
     static function get_record($id) {
         
         $record= Capsule::table("items")->find(number_format($id));
-        echo "<center>";     
+             echo "<center>";     
         echo "<table border='1'>";
                 
             
@@ -64,4 +76,5 @@ class dbhandler{
                 echo "</center>"; 
                 
     }
+
 }
